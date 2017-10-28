@@ -3,9 +3,29 @@
   <head>
     <meta charset="utf-8">
     <title>Pinterest API</title>
-    <script src="main.js" charset="utf-8"></script>
   </head>
   <body>
-  
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+    <script>
+      window.pAsyncInit = function() {
+          PDK.init({
+              appId: '4930913319035879965', // Change this
+              cookie: true
+          });
+      };
+
+      (function(d, s, id){
+          var js, pjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) {return;}
+          js = d.createElement(s); js.id = id;
+          js.src = "//assets.pinterest.com/sdk/sdk.js";
+          pjs.parentNode.insertBefore(js, pjs);
+      }(document, 'script', 'pinterest-jssdk'));
+  </script>
+  <script src="main.js" charset="utf-8"></script>
   </body>
 </html>
